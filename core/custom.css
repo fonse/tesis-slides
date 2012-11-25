@@ -1,0 +1,38 @@
+.red{
+	color:#a00;
+}
+
+.green{
+	color:#0a0;
+}
+
+.blue{
+	color:#00a;
+}
+
+.gray{
+	color:#aaa;
+}
+
+.emph{
+	color:#c44;
+}
+
+.hidden{
+	display:none;
+}
+
+.big{
+	text-align:center;
+	font-size:2.5em !important;
+	margin-top:1em;
+	letter-spacing: -0.05em;
+}
+
+#bruijn-def .deck-current{
+	display:block;
+}
+
+#bruijn-def .deck-current ~ .big{
+	display:none;
+}
