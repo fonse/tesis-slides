@@ -18,8 +18,11 @@
 	color:#c44;
 }
 
-.hidden{
-	display:none;
+p.caption{
+	margin-top:-0.8em;
+	font-size:0.5em;
+	text-align:center;
+	font-weight:bold;
 }
 
 .big{
@@ -29,10 +32,16 @@
 	letter-spacing: -0.05em;
 }
 
-#bruijn-def .deck-current{
+.hidden{
+	display:none;
+}
+
+.hidden.deck-current{
 	display:block;
 }
 
-#bruijn-def .deck-current ~ .big{
+.deck-current ~ .pseudo-slide{
 	display:none;
 }
+
+

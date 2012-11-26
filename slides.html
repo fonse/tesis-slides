@@ -49,7 +49,7 @@
 
 <!-- Normalidad -->
 <section class="slide">
-	<h2>Normalidad &ndash; Definición</h2>
+	<h2>Normalidad</h2>
 	<pre>Una secuencia <code>s</code> es <span class="emph">normal</span> si, para cada n, todos los bloques de tamaño n aparecen con igual frecuencia en <code>s</code>.</pre>
 	
 	<p>Por ejemplo, <code>s</code> es normal en base 2 si:</p>
@@ -94,8 +94,9 @@
 	</ul>
 </section>
 
+<!-- Discrepancia -->
 <section class="slide">
-	<h2>Normalidad &ndash; Discrepancia</h2>
+	<h2>Discrepancia de Normalidad</h2>
 	
 	<pre>La <span class="emph">discrepancia de normalidad</span> de una secuencia <code>s</code> para la posición <code>n</code> y tamaño de bloque <code>l</code> es la máxima diferencia entre la frecuencia real y la frecuencia esperada de los bloques de tamaño <code>l</code> en los primeros <code>n</code> símbolos de <code>s</code>.</pre>
 	<h3>Por ejemplo</h3>
@@ -109,8 +110,8 @@
 </section>
 
 <!-- Secuencias de Bruijn -->
-<section class="slide" id="bruijn-def">
-	<h2>Secuencias de Bruijn &ndash; Definición</h2>
+<section class="slide">
+	<h2>Secuencias de Bruijn</h2>
 	<pre>Una <span class="emph">secuencia de Bruijn</span> de orden <code>n</code> es una secuencia donde todos los bloques de tamaño <code>n</code> aparecen exáctamente 1 vez.</pre>
 	<h3>Ejemplo</h3>
 	<p>Una secuencia de Bruijn de orden 2 en base 3</p>
@@ -130,7 +131,87 @@
 		<div class="big">012002<span class="emph">21</span>10</div>
 		<div class="big">01200<span class="emph">22</span>110</div>
 	</div>
-	<div class="big">0120022110</div>
+	<div class="big pseudo-slide">0120022110</div>
+</section>
+
+<!-- Grafo de Bruijn -->
+<section class="slide">
+	<h2>Grafo de Bruijn</h2>
+	<pre>Un <span class="emph">grafo de Bruijn</span> de orden <code>n</code> es el grafo dirigido cuyos nodos son los bloques de <code>n</code> dígitos y dos nodos están conectados si los últimos <code>n-1</code> dígitos del primer nodo coinciden con los primeros dígitos del segundo.</pre>
+	<img src="img/bruijn-graph2.png" />
+	<p class="caption">Grafo de Bruijn de orden 2 para base 2</p>
+</section>
+
+<section class="slide">
+	<h2>Grafo de Bruijn &ndash; Teoremas</h2>
+	<pre>Un <span class="emph">ciclo Hamiltoniano</span> (ciclo que pasa por todos los nodos) en un Grafo de Bruijn de orden <code>n</code> representa una secuencia de Bruijn de orden <code>n</code>.</pre>
+	<div class="slide hidden">
+		<img src="img/hamiltoniano/1.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/hamiltoniano/2.png" />
+		<p><strong>Resultado:</strong> <span class="emph">01</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/hamiltoniano/3.png" />
+		<p><strong>Resultado:</strong> <span class="emph">011</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/hamiltoniano/4.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0110</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/hamiltoniano/4.png" />
+		<p><strong>Resultado:</strong> <span class="emph">01100</span></p>
+	</div>
+	<div class="pseudo-slide">
+		<img src="img/bruijn-graph2.png" />
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Grafo de Bruijn &ndash; Teoremas</h2>
+	<pre>Un <span class="emph">ciclo Euleriano</span> (ciclo que pasa por todos los ejes) en un Grafo de Bruijn de orden <code>n</code> representa una secuencia de Bruijn de orden <code>n+1</code>.</pre>
+	<div class="slide hidden">
+		<img src="img/euleriano/1.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/2.png" />
+		<p><strong>Resultado:</strong> <span class="emph">00</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/3.png" />
+		<p><strong>Resultado:</strong> <span class="emph">001</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/4.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0011</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/5.png" />
+		<p><strong>Resultado:</strong> <span class="emph">00111</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/6.png" />
+		<p><strong>Resultado:</strong> <span class="emph">001110</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/7.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0011101</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/8.png" />
+		<p><strong>Resultado:</strong> <span class="emph">00111010</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/8.png" />
+		<p><strong>Resultado:</strong> <span class="emph">001110100</span></p>
+	</div>
+	<div class="pseudo-slide">
+		<img src="img/bruijn-graph2.png" />
+	</div>
 </section>
 
 
