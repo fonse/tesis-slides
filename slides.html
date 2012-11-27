@@ -144,29 +144,26 @@
 
 <section class="slide">
 	<h2>Grafo de Bruijn &ndash; Teoremas</h2>
-	<pre>Un <span class="emph">ciclo Hamiltoniano</span> (ciclo que pasa por todos los nodos) en un Grafo de Bruijn de orden <code>n</code> representa una secuencia de Bruijn de orden <code>n</code>.</pre>
+	<pre>Un <span class="emph">camino Hamiltoniano</span> (pasa por todos los nodos) en un Grafo de Bruijn de orden <code>n</code> representa una secuencia de Bruijn de orden <code>n</code>.</pre>
 	<div class="slide hidden">
 		<img src="img/hamiltoniano/1.png" />
-		<p><strong>Resultado:</strong> <span class="emph">0</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">00</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/hamiltoniano/2.png" />
-		<p><strong>Resultado:</strong> <span class="emph">01</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">001</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/hamiltoniano/3.png" />
-		<p><strong>Resultado:</strong> <span class="emph">011</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">0011</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/hamiltoniano/4.png" />
-		<p><strong>Resultado:</strong> <span class="emph">0110</span></p>
-	</div>
-	<div class="slide hidden">
-		<img src="img/hamiltoniano/4.png" />
-		<p><strong>Resultado:</strong> <span class="emph">01100</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">00110</span></p>
 	</div>
 	<div class="pseudo-slide">
 		<img src="img/bruijn-graph2.png" />
+		<p>&nbsp;</p>
 	</div>
 </section>
 
@@ -175,77 +172,100 @@
 	<pre>Un <span class="emph">ciclo Euleriano</span> (ciclo que pasa por todos los ejes) en un Grafo de Bruijn de orden <code>n</code> representa una secuencia de Bruijn de orden <code>n+1</code>.</pre>
 	<div class="slide hidden">
 		<img src="img/euleriano/1.png" />
-		<p><strong>Resultado:</strong> <span class="emph">0</span></p>
-	</div>
-	<div class="slide hidden">
-		<img src="img/euleriano/2.png" />
 		<p><strong>Resultado:</strong> <span class="emph">00</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/3.png" />
+		<img src="img/euleriano/2.png" />
 		<p><strong>Resultado:</strong> <span class="emph">001</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/4.png" />
+		<img src="img/euleriano/3.png" />
 		<p><strong>Resultado:</strong> <span class="emph">0011</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/5.png" />
+		<img src="img/euleriano/4.png" />
 		<p><strong>Resultado:</strong> <span class="emph">00111</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/6.png" />
+		<img src="img/euleriano/5.png" />
 		<p><strong>Resultado:</strong> <span class="emph">001110</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/7.png" />
+		<img src="img/euleriano/6.png" />
 		<p><strong>Resultado:</strong> <span class="emph">0011101</span></p>
 	</div>
 	<div class="slide hidden">
-		<img src="img/euleriano/8.png" />
+		<img src="img/euleriano/7.png" />
 		<p><strong>Resultado:</strong> <span class="emph">00111010</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/euleriano/8.png" />
 		<p><strong>Resultado:</strong> <span class="emph">001110100</span></p>
 	</div>
+	<div class="slide hidden">
+		<img src="img/euleriano/9.png" />
+		<p><strong>Resultado:</strong> <span class="emph">0011101000</span></p>
+	</div>
 	<div class="pseudo-slide">
 		<img src="img/bruijn-graph2.png" />
+		<p>&nbsp;</p>
 	</div>
 </section>
 
 <!-- Secuencias de Bruijn Infinitas -->
 <section class="slide">
 	<h2>Secuencias de Bruijn Infinitas</h2>
-	<pre>En un alfabeto de al menos 3 dígitos, un camino Hamiltoniano en un grafo de Bruijn se puede extender a uno Euleriano.</pre>
+	<pre>En un alfabeto de al menos 3 dígitos, un camino Hamiltoniano en un grafo de Bruijn se puede extender a un ciclo Euleriano.</pre>
+	<div class="slide hidden">
+		<img src="img/bruijn-graph3-hamilton.png" />
+		<p><strong>Resultado:</strong> <span class="emph">012</span></p>
+	</div>
 	<div class="slide hidden">
 		<img src="img/extension/1.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">0</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">0</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/extension/2.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">02</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">00</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/extension/3.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">022</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">002</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/extension/4.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">0221</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">0022</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/extension/5.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">02211</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">00221</span></p>
 	</div>
 	<div class="slide hidden">
 		<img src="img/extension/6.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span><span class="blue">022110</span></p>
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">002211</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/extension/7.png" />
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">0022110</span></p>
+	</div>
+	<div class="slide hidden">
+		<img src="img/extension/7.png" />
+		<p><strong>Resultado:</strong> <span class="emph">012</span><span class="blue">0022110</span><span class="green">0010111210202122201</span></p>
 	</div>
 	<div class="pseudo-slide">
-		<img src="img/bruijn-graph3-hamilton.png" />
-		<p><strong>Resultado:</strong> <span class="emph">120</span></p>
+		<img src="img/bruijn-graph3.png" />
+		<p>&nbsp;</p>
 	</div>
+</section>
+
+<section class="slide">
+	<h2>Secuencias de Bruijn Infinitas</h2>
+	<pre>Para alfabetos de 2 dígitos no podemos extender una secuencia de Bruijn de orden <code>n</code> a una de orden <code>n+1</code>, pero sí a una de <code>n+2</code>.</pre>
+	<h3>Ejemplos</h3>
+	<ul>
+		<li><span class="emph">01100</span><span class="blue">10100001111011</span>...</li>
+		<li><span class="emph">0100011101</span><span class="blue">00101011001101111100000100</span>...</li>
+	</ul>
 </section>
 
 <!-- JS files. -->
