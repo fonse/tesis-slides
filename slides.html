@@ -22,29 +22,40 @@
 
 
 <!-- Carátula -->
-<section class="slide">
-	<!-- TODO -->
-	<h1>Carátula</h1>
+<section class="slide" id="start">
+	<div class="vcenter">
+		<h2>Estudio experimental de<br/>discrepancia de normalidad</h2>
+		<p>Alejandro Alfonso</p>
+		<p>Verónica Becher</p>
+	</div>
+	
+	<div class="powered-by">Powered by <a href="http://imakewebthings.com/deck.js">deck.js</a></div>
 </section>
 
 <!-- Conceptos Básicos -->
 <section class="slide">
-	<!-- TODO -->
 	<h2>Conceptos Básicos</h2>
-	<ul>
-		<li>
-			<h3>Símbolo</h3>
-			<p>Test</p>
-		</li>
-		<li>
-			<h3>Alfabeto</h3>
-			<p>Test</p>
-		</li>
-		<li>
-			<h3>Secuencia</h3>
-			<p>Test</p>
-		</li>
-	</ul>
+	<div class="slide hidden">
+		<h3>Alfabeto</h3>
+		<p>Conjunto de al menos 2 elementos a los que llamamos símbolos.</p>
+		<p class="big emph">{0, 1, 2}</p>
+	
+		<h3>Secuencia</h3>
+		<p>Sucesión ordenada de símbolos finita o infinita.</p>
+		<div class="big blue compact">01022</div>
+		<div class="big blue compact">012012012012...</div>
+	</div>
+	
+	<div class="pseudo-slide">
+		<h3>Alfabeto</h3>
+		<p>Conjunto de al menos 2 elementos a los que llamamos símbolos.</p>
+		<p class="big emph">{a, b, c}</p>
+	
+		<h3>Secuencia</h3>
+		<p>Sucesión ordenada de símbolos finita o infinita.</p>
+		<div class="big blue">abacc</div>
+		<div class="big blue">abcabcabcabc...</div>
+	</div>
 </section>
 
 <!-- Normalidad -->
@@ -117,21 +128,21 @@
 	<p>Una secuencia de Bruijn de orden 2 en base 3</p>
 	
 	<div class="slide hidden">
-		<div class="big ">012<span class="emph">00</span>22110</div>
-		<div class="big"><span class="emph">01</span>20022110</div>
-		<div class="big">0120<span class="emph">02</span>2110</div>
+		<div class="big compact">012<span class="emph">00</span>22110</div>
+		<div class="big compact"><span class="emph">01</span>20022110</div>
+		<div class="big compact">0120<span class="emph">02</span>2110</div>
 	</div>
 	<div class="slide hidden">
-		<div class="big">01200221<span class="emph">10</span></div>
-		<div class="big">0120022<span class="emph">11</span>0</div>
-		<div class="big">0<span class="emph">12</span>0022110</div>
+		<div class="big compact">01200221<span class="emph">10</span></div>
+		<div class="big compact">0120022<span class="emph">11</span>0</div>
+		<div class="big compact">0<span class="emph">12</span>0022110</div>
 	</div>
 	<div class="slide hidden">
-		<div class="big">01<span class="emph">20</span>022110</div>
-		<div class="big">012002<span class="emph">21</span>10</div>
-		<div class="big">01200<span class="emph">22</span>110</div>
+		<div class="big compact">01<span class="emph">20</span>022110</div>
+		<div class="big compact">012002<span class="emph">21</span>10</div>
+		<div class="big compact">01200<span class="emph">22</span>110</div>
 	</div>
-	<div class="big pseudo-slide">0120022110</div>
+	<div class="big compact pseudo-slide">0120022110</div>
 </section>
 
 <!-- Grafo de Bruijn -->
@@ -212,9 +223,9 @@
 	</div>
 </section>
 
-<!-- Secuencias de Bruijn Infinitas -->
+<!-- Secuencias de Bruijn Extendidas -->
 <section class="slide">
-	<h2>Secuencias de Bruijn Infinitas</h2>
+	<h2>Secuencias de Bruijn Extendidas</h2>
 	<pre>En un alfabeto de al menos 3 dígitos, un camino Hamiltoniano en un grafo de Bruijn se puede extender a un ciclo Euleriano.</pre>
 	<div class="slide hidden">
 		<img src="img/bruijn-graph3-hamilton.png" />

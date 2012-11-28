@@ -27,8 +27,11 @@ p.caption{
 
 .big{
 	text-align:center;
-	font-size:2.5em !important;
 	margin-top:1em;
+	font-size:2.5em !important;
+}
+
+.compact{
 	letter-spacing: -0.05em;
 }
 
@@ -44,4 +47,20 @@ p.caption{
 	display:none;
 }
 
+#start .vcenter{
+	font-weight:normal;
+	line-height:1.1em;
+}
 
+#start h2{
+	line-height:1.1em;
+}
+
+#start .powered-by{
+	position:absolute;
+	bottom:1.2em;
+	left:0;
+	right:0;
+	font-size:14px;
+	text-align:center;
+}
