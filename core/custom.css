@@ -39,14 +39,18 @@ p.caption{
 	display:none;
 }
 
+/* Pseudo slides */
 .hidden.deck-current{
 	display:block;
 }
 
-.deck-current ~ .pseudo-slide{
+.deck-current ~ .pseudo-slide,
+.deck-before .pseudo-slide{
 	display:none;
 }
 
+
+/* Specific Slides */
 #start .vcenter{
 	font-weight:normal;
 	line-height:1.1em;
@@ -56,9 +60,17 @@ p.caption{
 	line-height:1.1em;
 }
 
+#start h4{
+	font-size:0.5em;
+	line-height:0.8em;
+	font-family:inherit;
+	text-transform:uppercase;
+	color:#505050;
+}
+
 #start .powered-by{
 	position:absolute;
-	bottom:1.2em;
+	bottom:10px;
 	left:0;
 	right:0;
 	font-size:14px;

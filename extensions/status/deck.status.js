@@ -40,7 +40,7 @@ This module adds a (current)/(total) style status indicator to the deck.
 			statusTotal: '.deck-status-total'
 		},
 		
-		countNested: true
+		countNested: false
 	});
 	
 	$d.bind('deck.init', function() {
