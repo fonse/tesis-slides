@@ -45,7 +45,7 @@ p.caption{
 	display:none;
 }
 
-.slide h4{
+.slide h6{
 	font-size:0.5em;
 	line-height:0.8em;
 	font-family:inherit !important;
@@ -85,7 +85,7 @@ p.caption{
 }
 
 .slide .deck-current ~ .pseudo-slide,
-.slide .deck-before .pseudo-slide{
+.deck-before .pseudo-slide{
 	display:none;
 }
 

@@ -25,11 +25,11 @@
 <!-- Carátula -->
 <section class="slide" id="start">
 	<div class="vcenter">
-		<h4>XX de Diciembre de 2012</h4>
+		<h6>XX de Diciembre de 2012</h6>
 		<h2>Estudio experimental de<br/>discrepancia de normalidad</h2>
 		<p>Alejandro Alfonso</p>
 		
-		<h4>Directora</h4>
+		<h6>Directora</h6>
 		<p>Verónica Becher</p>
 	</div>
 	
@@ -329,11 +329,11 @@
 	<h2>Base 2 &ndash; Champernowne</h2>
 	<div class="plot">
 		<img src="img/plots/2/champer-4.png" />
-		<h4>Disrepancia para bloques tamaño 4</h4>
+		<h6>Disrepancia para bloques tamaño 4</h6>
 	</div>
 	<div class="plot">
 		<img src="img/plots/2/champer-witness-5.png" />
-		<h4>Testigos para bloques tamaño 5</h4>
+		<h6>Testigos para bloques tamaño 5</h6>
 	</div>
 </section>
 
@@ -342,11 +342,11 @@
 	<h2>Base 2 &ndash; Ford Extendida</h2>
 	<div class="plot">
 		<img src="img/plots/2/ford-2.png" />
-		<h4>Disrepancia para bloques tamaño 2</h4>
+		<h6>Disrepancia para bloques tamaño 2</h6>
 	</div>
 	<div class="plot">
 		<img src="img/plots/2/ford-witness-11.png" />
-		<h4>Testigos para bloques tamaño 11</h4>
+		<h6>Testigos para bloques tamaño 11</h6>
 	</div>
 </section>
 
@@ -355,11 +355,11 @@
 	<h2>Base 2 &ndash; Ehrenfeucht-Mycielski</h2>
 	<div class="plot">
 		<img src="img/plots/2/em-2.png" />
-		<h4>Disrepancia para bloques tamaño 2</h4>
+		<h6>Disrepancia para bloques tamaño 2</h6>
 	</div>
 	<div class="plot">
 		<img src="img/plots/2/em-witness-6.png" />
-		<h4>Testigos para bloques tamaño 6</h4>
+		<h6>Testigos para bloques tamaño 6</h6>
 	</div>
 </section>
 
@@ -368,21 +368,140 @@
 	<h2>Base 2 &ndash; Comparación</h2>
 	<div class="plot slide hidden">
 		<img src="img/plots/2/compare-all-10.png" />
-		<h4>Disrepancia para bloques tamaño 10</h4>
+		<h6>Disrepancia para bloques tamaño 10</h6>
 	</div>
 	<div class="plot slide hidden">
 		<img src="img/plots/2/compare-all-14.png" />
-		<h4>Disrepancia para bloques tamaño 14</h4>
+		<h6>Disrepancia para bloques tamaño 14</h6>
 	</div>
 	<div class="plot slide hidden">
 		<img src="img/plots/2/compare-all-16.png" />
-		<h4>Disrepancia para bloques tamaño 16</h4>
+		<h6>Disrepancia para bloques tamaño 16</h6>
 	</div>
 	<div class="plot pseudo-slide">
 		<img src="img/plots/2/compare-all-4.png" />
-		<h4>Disrepancia para bloques tamaño 4</h4>
+		<h6>Disrepancia para bloques tamaño 4</h6>
 	</div>
 </section>
+
+<!-- Base 3 -- Secuencias Estudiadas -->
+<section class="slide">
+	<h2>Base 3 &ndash; Secuencias Estudiadas</h2>
+	<h3>Variantes de Champernowne</h3>
+	<p>Bajo algún criterio de orden, se enumeran los 3 dígitos: <span class="emph">0 1 2</span><br/>
+	Luego se enumeran los bloques de tamaño 2: <span class="emph">00 01 02 10 11 12 20 21 22</span><br/>
+	Y así sucesivamente para bloques de tamaño 3, 4, 5...</p>
+	
+	<h4>Secuencias estudiadas</h4>
+	<ol>
+		<li><h5>Orden lexicográfico</h5>
+		<span class="emph">0 1 2</span> + <span class="emph">00 01 02 10 11 12 20 21 22</span> + ...</li>
+		
+		<li><h5>Orden aleatorio</h5>
+		<span class="emph">0 2 1</span> + <span class="emph">00 22 20 12 21 01 11 10 02</span> + ...</li>
+		
+		<li><h5>Orden según cantidad de apariciones del símbolo <span class="emph">2</span></h5>
+		<span class="emph">0 1 2</span> + <span class="emph">00 01 10 11 02 12 20 21 22</span> + ...</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Base 3 &ndash; Secuencias Estudiadas</h2>
+	<h3>Secuencias de Bruijn Extendidas</h3>
+	<p>Cuando se extiende el camino Hamiltoniano, de los 3 ejes que tiene cada nodo tenemos 2 que no fueron ya usados por este camino.</p>
+	<p>Según el criterio que decide cuál eje tomar, se obtienen secuencias distintas.</p>
+	
+	<h4>Secuencias estudiadas</h4>
+	<ol>
+		<li><h5>Siempre se toma el eje lexicográficamente menor</h5>
+		Con este criterio obtenemos la <span class="emph">secuencia de Ford extendida</span> para base 3.</li>
+		
+		<li><h5>Casi siempre se toma el eje lexicográficamente menor</h5>
+		75% de probabilidad de tomar el eje lexicográficamente más chico.</li>
+		
+		<li><h5>Se toma un eje al azar</h5>
+		50% de probabilidad de tomar el eje lexicográficamente más chico.</li>
+	</ol>
+</section>
+
+<!-- Base 3 -- Champernowne (Lexicográfica) -->
+<section class="slide">
+	<h2>Base 3 &ndash; Champernowne (Lexicográfica)</h2>
+	<div class="plot">
+		<img src="img/plots/3/champer1-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/champer1-witness-5.png" />
+		<h6>Testigos para bloques tamaño 5</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Champernowne 2 (Aleatoria) -->
+<section class="slide">
+	<h2>Base 3 &ndash; Champernowne (Aleatoria)</h2>
+	<div class="plot">
+		<img src="img/plots/3/champer2-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/champer2-witness-3.png" />
+		<h6>Testigos para bloques tamaño 3</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Champernowne 3 (Evita dígito) -->
+<section class="slide">
+	<h2>Base 3 &ndash; Champernowne (Evita dígito)</h2>
+	<div class="plot">
+		<img src="img/plots/3/champer3-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/champer3-witness-3.png" />
+		<h6>Testigos para bloques tamaño 3</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Ford Extendida -->
+<section class="slide">
+	<h2>Base 3 &ndash; Ford Extendida</h2>
+	<div class="plot">
+		<img src="img/plots/3/ford-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/ford-witness-7.png" />
+		<h6>Testigos para bloques tamaño 7</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- De Bruijn Extendida (25%) -->
+<section class="slide">
+	<h2>Base 3 &ndash; De Bruijn Extendida (25%)</h2>
+	<div class="plot">
+		<img src="img/plots/3/bruijn25-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/bruijn25-witness-4.png" />
+		<h6>Testigos para bloques tamaño 4</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- De Bruijn Extendida (50%) -->
+<section class="slide">
+	<h2>Base 3 &ndash; De Bruijn Extendida (50%)</h2>
+	<div class="plot">
+		<img src="img/plots/3/bruijn50-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot">
+		<img src="img/plots/3/bruijn50-witness-3.png" />
+		<h6>Testigos para bloques tamaño 3</h6>
+	</div>
+</section>
+
 
 
 <!-- Status -->
