@@ -502,7 +502,58 @@
 	</div>
 </section>
 
-<!-- TODO FALTAN SLIDES TODO -->
+
+<!-- Base 3 -- Variantes de Champernowne -->
+<section class="slide">
+	<h2>Base 3 &ndash; Variantes de Champernowne</h2>
+	<div class="plot">
+		<img src="img/plots/3/compare-champer-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Secuencias de Bruijn -->
+<section class="slide">
+	<h2>Base 3 &ndash; Secuencias de Bruijn</h2>
+	<div class="plot">
+		<img src="img/plots/3/compare-bruijn-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Comparación Parcial -->
+<section class="slide">
+	<h2>Base 3 &ndash; Comparación Parcial</h2>
+	<div class="plot slide hidden">
+		<img src="img/plots/3/compare-ford-champer-3.png" />
+		<h6>Disrepancia para bloques tamaño 3</h6>
+	</div>
+	<div class="plot slide hidden">
+		<img src="img/plots/3/compare-ford-champer-6.png" />
+		<h6>Disrepancia para bloques tamaño 6</h6>
+	</div>
+	<div class="plot slide hidden">
+		<img src="img/plots/3/compare-ford-champer-10.png" />
+		<h6>Disrepancia para bloques tamaño 10</h6>
+	</div>
+	<div class="plot pseudo-slide">
+		<img src="img/plots/3/compare-ford-champer-1.png" />
+		<h6>Disrepancia para bloques tamaño 1</h6>
+	</div>
+</section>
+
+<!-- Base 3 -- Comparación con Todas -->
+<section class="slide">
+	<h2>Base 3 &ndash; Comparación con Todas</h2>
+	<div class="plot slide hidden">
+		<img src="img/plots/3/compare-all-8.png" />
+		<h6>Disrepancia para bloques tamaño 8</h6>
+	</div>
+	<div class="plot pseudo-slide">
+		<img src="img/plots/3/compare-all-2.png" />
+		<h6>Disrepancia para bloques tamaño 2</h6>
+	</div>
+</section>
 
 <!-- En Resumen -->
 <section class="slide">
@@ -535,6 +586,11 @@
 	</ul>
 </section>
 
+<!-- Conjeturas -->
+<section class="slide" id="fin">
+	
+</section>
+
 
 <!-- Status -->
 <p class="deck-status">
@@ -559,12 +615,12 @@
 	$(function() {
 		$(document).bind('deck.init', function(){
 			var current = $['deck']('getSlide');
-			if (current.is("#start")){
+			if (current.is("#start,#fin")){
 				$(".deck-status").hide();
 			}
 		}).bind('deck.change', function(e, from, to){
 			var current = $['deck']('getSlide', to);
-			if (current.is("#start")){
+			if (current.is("#start,#fin")){
 				$(".deck-status").hide();
 			} else {
 				$(".deck-status").show();

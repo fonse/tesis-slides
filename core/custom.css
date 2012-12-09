@@ -114,6 +114,12 @@ p.caption{
 	text-align:center;
 }
 
+#fin{
+	background-image:url(../img/fun/fin.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
+}
 
 #toasty{
 	position:fixed;
