@@ -113,9 +113,9 @@
 <section class="slide">
 	<h2>Discrepancia de Normalidad</h2>
 	
-	<pre>La <span class="emph">discrepancia de normalidad</span> de una secuencia <code>s</code> para la posición <code>n</code> y tamaño de bloque <code>l</code> es la máxima diferencia entre la frecuencia real y la frecuencia esperada de los bloques de tamaño <code>k</code> en los primeros <code>n</code> símbolos de <code>s</code>.</pre>
+	<pre>La <span class="emph">discrepancia de normalidad</span> de una secuencia <code>s</code> para la posición <code>n</code> y tamaño de bloque <code>l</code> es la máxima diferencia entre la frecuencia real y la frecuencia esperada de los bloques de tamaño <code>l</code> en los primeros <code>n</code> símbolos de <code>s</code>.</pre>
 	<h3>Por ejemplo</h3>
-	<p>Si <code>s = 0120010...</code>, <code>n = 7</code> y <code>k = 1</code>:</p>
+	<p>Si <code>s = 0120010...</code>, <code>n = 7</code> y <code>l = 1</code>:</p>
 	<ul>
 		<li>El <span class="emph">0</span> aparece 4 veces en 012002: <code>|4/7 - 1/3| = 0.2380...</code></li>
 		<li>El <span class="emph">1</span> aparece 2 veces en 012002: <code>|2/7 - 1/3| = 0.0476...</code></li>
@@ -502,12 +502,49 @@
 	</div>
 </section>
 
+<!-- TODO FALTAN SLIDES TODO -->
+
+<!-- En Resumen -->
+<section class="slide">
+	<h2>En Resumen</h2>
+	<ul>
+		<li>Las variantes de Champernowne y secuencias de Bruijn reflejan en la forma de arcos de su discrepancia su construccioń que busca incluir todos los bloques en orden.</li>
+		<li>La variante de Champernowne que posterga las apariciones de un dígito, construida para maximizar la discrepancia, en efecto la maximiza.</li>
+		<li>La secuencia de Ford Extendida maximiza la discrepancia de las secuencias de Bruijn, la cual disminuye a medida que aumenta la aleatoriedad en su construcción.</li>
+		<li>Las secuancias de Bruijn tienen mayor discrepancia que Champernowne y sus variantes para bloques chicos, pero esto se revierte para bloques más grandes.</li>
+		<li>La secuencia de Ehrenfeucht-Mycielski mantiene su discrepancia por debajo que las otras secuencias que se sabe que son normales. Esto indicaría que la secuencia de Ehrenfeucht-Mycielski es normal.</li>
+	</ul>
+</section>
+
+
+<!-- Conjeturas -->
+<section class="slide">
+	<h2>Conjeturas</h2>
+	<ul>
+		<li>
+			<p>La discrepancia de las secuencias de Bruijn extendidas es de orden <img class="formula" src="img/latex/champer.gif" />.</p>
+		    <p>Es decir, su discrepancia es la misma que la de Champernowne.</p>
+	    </li>
+		<li>
+			<p>La discrepancia de la secuencia de Ford Extendida es mínima para la familia de secuencias de Bruijn extendidas.</p>
+		</li>
+		<li>
+			<p>La discrepancia de las secuencias de Champwenowne (original) y Ford Extendida pueden calcularse mirando únicamente los bloques que son rachas de <code>0</code>.</p>
+		    <p>Es decir, la discrepancia de estas secuencias es la diferencia entre la frecuencia real y esperada de los bloques de forma <code>0<span class="sup">i</span></code>.</p>
+		</li>
+	</ul>
+</section>
 
 
 <!-- Status -->
 <p class="deck-status">
 	<span class="deck-status-current"></span>/<span class="deck-status-total"></span>
 </p>
+
+<!-- Toasty! -->
+<div id="toasty">
+	<img src="img/toasty/toasty.png" />
+</div>
 
 <!-- JS files -->
 <script src="core/jquery-1.7.2.min.js"></script>
@@ -535,6 +572,11 @@
 		});
 		
 		$.deck('.slide');
+		
+		if ($("html").is(".cssanimations")){
+			var delay = (Math.round(Math.random() * 10) + 10) * 120000;
+			setTimeout(function(){$("#toasty").addClass('show')}, delay);
+		}
 	});
 </script>
 </body>

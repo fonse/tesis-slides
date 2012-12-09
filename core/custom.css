@@ -18,6 +18,11 @@
 	color:#c44;
 }
 
+span.sup{
+	font-size: 0.6em;
+	vertical-align: super;
+}
+
 p.caption{
 	margin-top:-0.8em;
 	font-size:0.5em;
@@ -107,4 +112,41 @@ p.caption{
 	right:0;
 	font-size:14px;
 	text-align:center;
+}
+
+
+#toasty{
+	position:fixed;
+	bottom:0;
+	right:0;
+	z-index:99999;
+}
+
+#toasty img{
+	display:block;
+	position:relative;
+	left:100%;
+}
+
+#toasty.show img{
+	animation-duration:1000ms;
+	animation-name:slidein;
+}
+
+@keyframes slidein{
+	0%{
+		left:100%;
+	}
+	
+	33%{
+		left:0;
+	}
+	
+	66%{
+		left:0;
+	}
+	
+	100%{
+		left:100%;
+	}
 }
