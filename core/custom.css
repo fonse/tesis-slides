@@ -50,6 +50,10 @@ p.caption{
 	display:none;
 }
 
+.slide .spacious li{
+	padding:0.5em 0;
+}
+
 .slide h6{
 	font-size:0.5em;
 	line-height:0.8em;

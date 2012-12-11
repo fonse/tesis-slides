@@ -1,0 +1,40 @@
+.deck-container .deck-status {
+  position: absolute;
+  bottom: 6px;
+  right: 5px;
+  color: #888;
+  z-index: 3;
+  margin: 0;
+  text-align:right;
+}
+
+body.deck-container .deck-status {
+  position: fixed;
+}
+
+.deck-container .deck-substatus{
+	font-size:0;
+	height:8px;
+}
+
+.deck-substatus b{
+	display:inline-block;
+	width:0;
+	height:0;
+	border-radius:50px;
+	border:2px solid #888;
+	margin:3px 3px 1px;
+}
+
+
+.deck-substatus .current{
+	width:2px;
+	height:2px;
+	margin:2px 2px 0;
+}
+
+@media print {
+  .deck-status {
+    display: none;
+  }
+}

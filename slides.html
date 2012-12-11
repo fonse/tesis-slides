@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
 	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
-	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/substatus/deck.substatus.css">
 	<link rel="stylesheet" href="core/custom.css">
 
 	<link rel="stylesheet" href="themes/style/web-2.0.css">
@@ -25,7 +25,7 @@
 <!-- Carátula -->
 <section class="slide" id="start">
 	<div class="vcenter">
-		<h6>XX de Diciembre de 2012</h6>
+		<h6>18 de Diciembre de 2012</h6>
 		<h2>Estudio experimental de<br/>discrepancia de normalidad</h2>
 		<p>Alejandro Alfonso</p>
 		
@@ -34,6 +34,17 @@
 	</div>
 	
 	<div class="powered-by">Powered by <a href="http://imakewebthings.com/deck.js">deck.js</a></div>
+</section>
+
+<!-- Objetivo de esta Tesis -->
+<section class="slide">
+	<h2>Objetivo de esta Tesis</h2>
+	<ul class="spacious">
+		<li>Los problemas sobre normalidad son difíciles de resolver.</li>
+		<li>Con estudios experimantales se intenta comprender mejor el problema.</li>
+		<li>Observando los resultados se plantean conjeturas sobre el problema.</li>
+		<li>Esto sirve como punto de partida para posibles teoremas.</li>
+	</ul>
 </section>
 
 <!-- Conceptos Básicos -->
@@ -71,16 +82,16 @@
 	<ul>
 		<li>
 			<span class="emph">0</span> y <span class="emph">1</span>
-			aparecen con frecuencia <code>1/2</code> cada uno
+			aparecen con frecuencia <code>1/2</code> cada uno.
 		</li>
 		<li>
 			<span class="emph">00</span>, <span class="emph">01</span>, <span class="emph">10</span>, <span class="emph">11</span>
-			aparecen con frecuencia <code>1/4</code> cada uno
+			aparecen con frecuencia <code>1/4</code> cada uno.
 		</li>
 		<li>
 			<span class="emph">000</span>, <span class="emph">001</span>, <span class="emph">010</span>, <span class="emph">011</span>,
 			<span class="emph">100</span>, <span class="emph">101</span>, <span class="emph">110</span>, <span class="emph">111</span>
-			aparecen con frecuencia <code>1/8</code> cada uno
+			aparecen con frecuencia <code>1/8</code> cada uno.
 		</li>
 		<li>Y así sucesivamente...</li>
 	</ul>
@@ -94,7 +105,7 @@
 	<ul>
 		<li><span class="emph">0</span> y <span class="emph">1</span> aparecen con probabilidad 1/2.</li>
 		<li>Pero <span class="emph">00</span> y <span class="emph">11</span> nunca aparecen.</li>
-		<li>Entonces <code>s</code> no es normal</li>
+		<li>Entonces <code>s</code> no es normal.</li>
 	</ul>
 </section>
 
@@ -129,7 +140,7 @@
 	<h2>Secuencias de Bruijn</h2>
 	<pre>Una <span class="emph">secuencia de Bruijn</span> de orden <code>n</code> es una secuencia donde todos los bloques de tamaño <code>n</code> aparecen exactamente 1 vez.</pre>
 	<h3>Ejemplo</h3>
-	<p>Una secuencia de Bruijn de orden 2 en base 3</p>
+	<p>Una secuencia de Bruijn de orden 2 en base 3.</p>
 	
 	<div class="slide hidden">
 		<div class="big compact">012<span class="emph">00</span>22110</div>
@@ -289,7 +300,7 @@
 	<ul>
 		<li>
 			<h3>Champernowne</h3>
-			<p>Concatenación de todos los naturales en bináreo.</p>
+			<p>Concatenación de todos los naturales en binario.</p>
 		</li>
 		<li>
 			<h3>Secuencia de Ford Extendida</h3>
@@ -298,7 +309,7 @@
 		<li>
 			<h3>Ehrenfeucht-Mycielski</h3>
 			<p>Empieza con 010.</p>
-			<p>Para encotrar el siguiente dígito, se busca el sufijo más largo que se repita y se niega el bit que le sigue a la última aparición.</p>
+			<p>Para encontrar el siguiente dígito, se busca el sufijo más largo que se repita y se niega el bit que le sigue a la última aparición.</p>
 		</li>
 	</ul>
 </section>
@@ -310,12 +321,12 @@
 		<li>
 			<h3>Champernowne</h3>
 			<p>Es normal.<br/>
-			Su discrepancia está acotada por <img class="formula" src="img/latex/champer.gif" /></p>
+			Su discrepancia está acotada por orden <img class="formula" src="img/latex/champer.gif" /></p>
 		</li>
 		<li>
 			<h3>Secuencias de Bruijn Extendidas</h3>
 			<p>Son normales.<br/>
-			Su discrepancia está acotada por <img class="formula" src="img/latex/bruijn.gif" /> &raquo; <img class="formula" src="img/latex/champer.gif" /></p>
+			Su discrepancia está acotada por orden <img class="formula" src="img/latex/bruijn.gif" /> &raquo; <img class="formula" src="img/latex/champer.gif" /></p>
 		</li>
 		<li>
 			<h3>Ehrenfeucht-Mycielski</h3>
@@ -558,12 +569,12 @@
 <!-- En Resumen -->
 <section class="slide">
 	<h2>En Resumen</h2>
-	<ul>
-		<li>Las variantes de Champernowne y secuencias de Bruijn reflejan en la forma de arcos de su discrepancia su construccioń que busca incluir todos los bloques en orden.</li>
-		<li>La variante de Champernowne que posterga las apariciones de un dígito, construida para maximizar la discrepancia, en efecto la maximiza.</li>
-		<li>La secuencia de Ford Extendida maximiza la discrepancia de las secuencias de Bruijn, la cual disminuye a medida que aumenta la aleatoriedad en su construcción.</li>
+	<ul class="spacious">
+		<li>Forma de arcos para variantes de Champernowne y de Bruijn.</li>
+		<li>La variante 2 de Champernowne maximiza la discrepancia entre las estudiadas.</li>
+		<li>Ford Extendida maximiza la discrepancia de las secuencias de Bruijn estudiadas.</li>
+		<li>Ehrenfeucht-Mycielski tiene discrepancia menor que las otras secuencias.</li>
 		<li>Las secuancias de Bruijn tienen mayor discrepancia que Champernowne y sus variantes para bloques chicos, pero esto se revierte para bloques más grandes.</li>
-		<li>La secuencia de Ehrenfeucht-Mycielski mantiene su discrepancia por debajo que las otras secuencias que se sabe que son normales. Esto indicaría que la secuencia de Ehrenfeucht-Mycielski es normal.</li>
 	</ul>
 </section>
 
@@ -571,17 +582,10 @@
 <!-- Conjeturas -->
 <section class="slide">
 	<h2>Conjeturas</h2>
-	<ul>
-		<li>
-			<p>La discrepancia de las secuencias de Bruijn extendidas es de orden <img class="formula" src="img/latex/champer.gif" />.</p>
-		    <p>Es decir, su discrepancia es la misma que la de Champernowne.</p>
-	    </li>
-		<li>
-			<p>La discrepancia de la secuencia de Ford Extendida es mínima para la familia de secuencias de Bruijn extendidas.</p>
-		</li>
-		<li>
-			<p>La discrepancia de las secuencias de Champwenowne (original) y Ford Extendida pueden calcularse mirando únicamente los bloques que son rachas de <code>0</code>.</p>
-		    <p>Es decir, la discrepancia de estas secuencias es la diferencia entre la frecuencia real y esperada de los bloques de forma <code>0<span class="sup">i</span></code>.</p>
+	<ul class="spacious">
+		<li>La discrepancia de las secuencias de Bruijn extendidas es de orden <img class="formula" src="img/latex/champer.gif" /></li>
+		<li>La discrepancia de la secuencia de Ford Extendida es máxima para la familia de secuencias de Bruijn extendidas.</li>
+		<li>La discrepancia de las secuencias de Champwenowne (original) y Ford Extendida pueden calcularse mirando únicamente los bloques que son rachas de <code>0</code>.</p>
 		</li>
 	</ul>
 </section>
@@ -593,9 +597,10 @@
 
 
 <!-- Status -->
-<p class="deck-status">
+<div class="deck-status">
 	<span class="deck-status-current"></span>/<span class="deck-status-total"></span>
-</p>
+	<div class="deck-substatus"></div>
+</div>
 
 <!-- Toasty! -->
 <div id="toasty">
@@ -609,7 +614,7 @@
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
 <script src="extensions/hash/deck.hash.js"></script>
-<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/substatus/deck.substatus.js"></script>
 
 <script>
 	$(function() {
